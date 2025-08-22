@@ -13,7 +13,6 @@ catalog:
   '@types/picomatch': ^4.0.2
   ansis: ^4.1.0
   bumpp: ^10.2.3
-  bun-types-no-globals: github:alii/bun-types-no-globals
   esbuild: ^0.25.9
   esbuild-plugin-copy: ^2.1.1
   eslint: ^9.33.0

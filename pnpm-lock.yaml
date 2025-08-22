@@ -39,9 +39,6 @@ catalogs:
     bumpp:
       specifier: ^10.2.3
       version: 10.2.3
-    bun-types-no-globals:
-      specifier: github:alii/bun-types-no-globals
-      version: 0.0.0-beta.1
     esbuild-plugin-copy:
       specifier: ^2.1.1
       version: 2.1.1
@@ -215,9 +212,6 @@ importers:
       bumpp:
         specifier: 'catalog:'
         version: 10.2.3
-      bun-types-no-globals:
-        specifier: 'catalog:'
-        version: https://codeload.github.com/alii/bun-types-no-globals/tar.gz/17a6f38561ee32a7f8dd1b3df4f90c1eadf2578c
       esbuild:
         specifier: ^0.25.9
         version: 0.25.9
@@ -2030,10 +2024,6 @@ packages:
     resolution: {integrity: sha512-nsFBZACxuBVu6yzDSaZZaWpX5hTQ+++9WtYkmO+0Bd3cpSq0Mzvqw5V83n+fOyRj3dYuZRFCQf5Z9NNfZj+Rnw==}
     engines: {node: '>=18'}
     hasBin: true
-
-  bun-types-no-globals@https://codeload.github.com/alii/bun-types-no-globals/tar.gz/17a6f38561ee32a7f8dd1b3df4f90c1eadf2578c:
-    resolution: {tarball: https://codeload.github.com/alii/bun-types-no-globals/tar.gz/17a6f38561ee32a7f8dd1b3df4f90c1eadf2578c}
-    version: 0.0.0-beta.1
 
   bundle-name@3.0.0:
     resolution: {integrity: sha512-PKA4BeSvBpQKQ8iPOGCSiell+N8P+Tf1DlwqmYhpe2gAhKPHn8EYOxVT+ShuGmhg8lN8XiSlS80yiExKXrURlw==}
@@ -7097,8 +7087,6 @@ snapshots:
       yaml: 2.8.1
     transitivePeerDependencies:
       - magicast
-
-  bun-types-no-globals@https://codeload.github.com/alii/bun-types-no-globals/tar.gz/17a6f38561ee32a7f8dd1b3df4f90c1eadf2578c: {}
 
   bundle-name@3.0.0:
     dependencies:

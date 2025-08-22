@@ -60,7 +60,6 @@
     "@types/picomatch": "catalog:",
     "ansis": "catalog:",
     "bumpp": "catalog:",
-    "bun-types-no-globals": "catalog:",
     "esbuild": "catalog:",
     "esbuild-plugin-copy": "catalog:",
     "eslint": "catalog:",

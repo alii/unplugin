@@ -1,7 +1,7 @@
 import { createUnplugin } from 'unplugin'
 import { describe, expect, it, vi } from 'vitest'
 
-describe('bun nested plugin support', () => {
+describe.skipIf(typeof Bun === 'undefined')('bun nested plugin support', () => {
   it('should call buildStart for all nested plugins', async () => {
     const buildStart1 = vi.fn()
     const buildStart2 = vi.fn()
@@ -18,11 +18,12 @@ describe('bun nested plugin support', () => {
     ])
 
     const bunPlugin = unplugin.bun()
-    const mockBuild = {
+    const mockBuild: Bun.PluginBuilder = {
       onResolve: vi.fn(),
       onLoad: vi.fn(),
-      config: { outdir: './dist' },
-    } as never as Bun.PluginBuilder
+      onStart: vi.fn(callback => callback()),
+      config: { outdir: './dist' } as Bun.BuildConfig & { plugins: Bun.BunPlugin[] },
+    } as Partial<Bun.PluginBuilder> as Bun.PluginBuilder
 
     await bunPlugin.setup(mockBuild)
 
@@ -52,6 +53,7 @@ describe('bun nested plugin support', () => {
         onResolveCallback.mockImplementation(callback)
       }),
       onLoad: vi.fn(),
+      onStart: vi.fn(),
       config: { outdir: './dist' },
     } as never as Bun.PluginBuilder
 
@@ -102,6 +104,7 @@ describe('bun nested plugin support', () => {
           onLoadCallback = callback
         }
       }),
+      onStart: vi.fn(),
       config: { outdir: './dist' },
     } as never as Bun.PluginBuilder
 

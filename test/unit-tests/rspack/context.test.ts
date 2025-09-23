@@ -18,7 +18,7 @@ describe('createBuildContext', () => {
     })
   })
 
-  it('emitFile - should return expected', () => {
+  it.skipIf(typeof Bun !== 'undefined')('emitFile - should return expected', () => {
     const emitAssetMock = vi.fn()
     const RawSourceMock = vi.fn(content => ({ content }))
     const compiler = { name: 'testCompiler' }

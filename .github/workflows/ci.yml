@@ -65,8 +65,8 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Test
+      - name: Test under Node.js
         run: pnpm run test
 
-      - name: Test with bun
+      - name: Test under Bun
         run: bun --bun vitest
